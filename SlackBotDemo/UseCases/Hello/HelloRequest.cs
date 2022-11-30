@@ -31,6 +31,7 @@ public class HelloRequestHandler : IRequestHandler<HelloRequest>
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error doing a thing");
+            throw;
         }
         
         return Unit.Value;
